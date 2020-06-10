@@ -1,0 +1,57 @@
+
+ <%= render 'shared/errors', obj: @user %>
+
+
+
+<div class="vertical-allign">
+
+
+<div class="container">
+
+<form>
+
+  <div class="row justify-content-center">
+
+   <div class="col-5">
+
+
+
+      <h2 class = "text-center">Signup</h1>
+
+
+
+      <%= form_for(:session, html: {class: "ui form", role: "form"}, url: signup_path) do |f| %>
+      <div class="form-group" id="form1">
+        <%= f.label :username%>
+         <%= f.text_field :username, class: "form-control shadow rounded", placeholder: "Enter a username" %>
+        <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+
+        <%= f.label :password%>
+         <%= f.password_field :password, class: "form-control shadow rounded", placeholder: "Enter a password" %>
+
+      </div>
+      <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Remember me</label>
+      </div>
+
+      <%= f.button "Sign Up", class: "btn btn-primary" %>
+
+      <button type="submit" class="btn btn-secondary">Log in</button>
+
+      <% end %>
+
+    </div>
+
+    </div>
+</form>
+
+
+
+
+</div>
+
+</div>
